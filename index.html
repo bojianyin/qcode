@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:21480/Admin/Plugins/QRCode -->
+<html>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>二维码生成</title>    
+    <script src="js/jquery-1.10.2.js"></script>
+</head>
+<body class="indexbody">
+	<div id="qrcode"></div>
+    <script type="text/javascript" src="js/qrcode.min.js"></script>
+    <script type="text/javascript">
+        // 设置 qrcode 参数
+        var qrcode = new QRCode('qrcode', {
+            text: 'www.jq22.com',
+            width: 256,
+            height: 256,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+		qrcode.makeCode('weixin://wxpay/bizpayurl?pr=iliSW5f');
+    </script>
